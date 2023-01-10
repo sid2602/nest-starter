@@ -1,31 +1,40 @@
-import {
-  PrimaryGeneratedColumn,
-  Column,
-  UpdateDateColumn,
-  CreateDateColumn,
-} from 'typeorm';
-export abstract class BaseEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+// import { ApiProperty } from '@nestjs/swagger';
+// import {
+//   PrimaryGeneratedColumn,
+//   Column,
+//   UpdateDateColumn,
+//   CreateDateColumn,
+// } from 'typeorm';
+// export abstract class BaseEntity {
+//   @ApiProperty({ required: true })
+//   @PrimaryGeneratedColumn('uuid')
+//   id: string;
 
-  @Column({ type: 'boolean', default: true })
-  isActive: boolean;
+//   @ApiProperty({ required: true })
+//   @Column({ type: 'boolean', default: true })
+//   isActive: boolean;
 
-  @Column({ type: 'boolean', default: false })
-  isArchived: boolean;
+//   @ApiProperty({ required: true })
+//   @Column({ type: 'boolean', default: false })
+//   isArchived: boolean;
 
-  @CreateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
-  createDateTime: Date;
+//   @ApiProperty({ required: true })
+//   @CreateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
+//   createDateTime: Date;
 
-  @Column({ type: 'varchar', length: 300 })
-  createdBy: string;
+//   @ApiProperty({ required: true })
+//   @Column({ type: 'varchar', length: 300 })
+//   createdBy: string;
 
-  @UpdateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
-  lastChangedDateTime: Date;
+//   @ApiProperty({ required: true })
+//   @UpdateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
+//   lastChangedDateTime: Date;
 
-  @Column({ type: 'varchar', length: 300 })
-  lastChangedBy: string;
+//   @ApiProperty({ required: true })
+//   @Column({ type: 'varchar', length: 300 })
+//   lastChangedBy: string;
 
-  @Column({ type: 'varchar', length: 300, nullable: true })
-  internalComment: string | null;
-}
+//   @ApiProperty({ required: true })
+//   @Column({ type: 'varchar', length: 300, nullable: true })
+//   internalComment: string | null;
+// }

@@ -1,6 +1,5 @@
-import { Item } from './../model/item.entity';
+import { Item } from '../item/entities/item.entity';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { EntitySchema, MixedList } from 'typeorm';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
@@ -62,7 +61,7 @@ const configService = new ConfigService(process.env).ensureValues([
 
 const getEntities = (getByCommand?: boolean): Array<string | any> => {
   if (getByCommand === true) {
-    return ['**/*.entity{.ts,.js}'];
+    return ['**/**/*.entity{.ts,.js}'];
   }
 
   return [Item];

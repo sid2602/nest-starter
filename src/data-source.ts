@@ -10,7 +10,7 @@ import 'reflect-metadata';
   "password": "mysecretpassword",
   "database": "my_database",
   "entities": [
-    "**/*.entity{.ts,.js}"
+    "**/**/*.entity{.ts,.js}"
   ],
   "migrationsTableName": "migration",
   "migrations": [

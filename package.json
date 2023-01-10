@@ -7,7 +7,7 @@
    "scripts": {
       "build": "nest build",
       "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-      "start": "ts-node src/index.ts",
+      "start": "nest start",
       "start:dev": "nest start --watch",
       "start:debug": "nest start --debug --watch",
       "start:prod": "node dist/main",
@@ -19,7 +19,7 @@
       "test:e2e": "jest --config ./test/jest-e2e.json",
       "start:dev:db": "./start-db.sh",
       "initTypeorm": "ts-node -r tsconfig-paths/register ./write-type-orm-config.ts",
-      "typeorm": "npx typeorm-ts-node-esm",
+      "typeorm": "typeorm-ts-node-commonjs",
       "typeorm:migration:generate": "npx typeorm-ts-node-esm migration:generate ./src/migration/migration -d ./src/data-source.ts",
       "typeorm:migration:run": "npx typeorm-ts-node-esm migration:run -d ./src/data-source.ts"
    },

@@ -1,11 +1,14 @@
-import { Entity, Column } from 'typeorm';
-import { BaseEntity } from './base.entity';
+// import { ApiProperty } from '@nestjs/swagger';
+// import { Entity, Column } from 'typeorm';
+// import { BaseEntity } from './base.entity';
 
-@Entity({ name: 'item' })
-export class Item extends BaseEntity {
-  @Column({ type: 'varchar', length: 300 })
-  name: string;
+// @Entity({ name: 'item' })
+// export class Item extends BaseEntity {
+//   @ApiProperty({ required: true })
+//   @Column({ type: 'varchar', length: 300 })
+//   name: string;
 
-  @Column({ type: 'varchar', length: 300 })
-  description: string;
-}
+//   @ApiProperty({ required: true })
+//   @Column({ type: 'varchar', length: 300 })
+//   description: string;
+// }
